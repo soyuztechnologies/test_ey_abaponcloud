@@ -1,0 +1,5 @@
+CLASS zbp_ats_ao_boosuppl DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zats_ao_travel.
+ENDCLASS.
+
+CLASS zbp_ats_ao_boosuppl IMPLEMENTATION.
+ENDCLASS.

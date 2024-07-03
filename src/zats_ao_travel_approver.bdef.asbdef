@@ -1,0 +1,25 @@
+projection;
+strict ( 2 );
+
+define behavior for ZATS_AO_TRAVEL_APPROVER alias Travel
+{
+  use update;
+
+  field ( readonly ) TravelId, BeginDate, EndDate, TotalPrice,
+                           AgencyId, CustomerId, Description, OverallStatus;
+
+  use action acceptTravel;
+  use action rejectTravel;
+
+  use association _Booking ;
+}
+
+define behavior for ZATS_ao_BOOKING_APPROVER alias Booking
+{
+
+    field ( readonly ) CarrierId, ConnectionId, CustomerId,
+                             BookingDate, BookingId, BookingStatus, FlightDate,
+                             FlightPrice, TravelId;
+
+  use association _Travel ;
+}
